@@ -15,4 +15,25 @@ void main() {
     i = mockInt();
     expect(i, 42);
   });
+
+  test("default null value", () {
+    int? lineCount;
+    assert(lineCount == null);
+  });
+  test("default literal value", () {
+    int lineCount = 0;
+    assert(lineCount == 0);
+  });
+  test("default asign value", () {
+    int lineCount;
+
+    bool weLikeToCount = randomBool();
+    if (weLikeToCount) {
+      lineCount = countLines();
+    } else {
+      lineCount = 0;
+    }
+
+    print(lineCount);
+  });
 }
