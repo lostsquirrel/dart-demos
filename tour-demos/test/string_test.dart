@@ -1,11 +1,20 @@
 import 'package:test/test.dart';
 
 void main() {
+  test("string with single quotes", () {
+    var s3 = 'It\'s easy to escape the string delimiter.';
+    print(s3);
+  });
+
+  test("string with double quotes", () {
+    var s4 = "It's even easier to use the other delimiter.";
+    print(s4);
+  });
   test("String in multi lines", () {
     var s1 = 'String '
         'concatenation'
         ' works even over line breaks.';
-    var s2 = 'String ' + 'concatenation' + ' works even over line breaks.';
+    var s2 = 'String concatenation works even over line breaks.';
     expect(s1, s2);
   });
 
