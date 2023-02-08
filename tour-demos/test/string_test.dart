@@ -14,7 +14,8 @@ void main() {
     var s1 = 'String '
         'concatenation'
         ' works even over line breaks.';
-    var s2 = 'String concatenation works even over line breaks.';
+    // ignore: prefer_adjacent_string_concatenation, prefer_interpolation_to_compose_strings
+    var s2 = "String concatenation " + "works even over" + " line breaks.";
     expect(s1, s2);
   });
 
